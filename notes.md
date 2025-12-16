@@ -16,3 +16,10 @@ print("Hello, World!")
     Mutable means "Changeable." You can change what’s inside without getting a whole new thing.
     
     Immutable means "Unchangeable." Once you make it, you cannot change even a tiny bit of it. If you want something different, you have to throw the old one away and make a brand-new on
+
+# 3. Understanding the .split method:
+    The string split() method in Python divides a string into a list of substrings based on a specified separator. The original string remains unchanged. 
+    The basic syntax is str.split(sep=None, maxsplit=-1). 
+    1. sep (separator): An optional argument that specifies the delimiter. If not provided (or if None is passed), any sequence of whitespace characters (spaces, tabs, newlines) is used as the separator, and empty strings are discarded from the result.
+    
+    2. maxsplit: An optional argument that limits the number of splits. The default is -1, which means all occurrences of the separator are used for splitting. If a positive integer is provided, the string will be split at most that many times, and the remaining part of the string is returned as the final element of the list. 
