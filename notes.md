@@ -114,3 +114,34 @@ for index, (key, value) in enumerate(stock_levels.items()):
 # Index: 2, Key: cherries, Value: 30
 ```
     In summary, enumerate() is a versatile tool for cleanly iterating through data structures when you need access to the index of the current item within the loop
+
+# 5. Is it a pattern if I have a lot of if statements or switch statements to use dictionary instead?
+    It is a common and usually normal pattern that a large number of if or match statements can be refactored and solved using a Python dictionary or similar map/hash table structures in other languages [1, 2]. This approach often makes the code cleaner, more efficient, and easier to maintain. 
+
+>    **How this pattern works:**
+    Instead of using procedural logic like this:
+
+```python
+    if code == 1:
+    return "Action A"
+    elif code == 2:
+        return "Action B"
+    # ... 18 more elif statements
+```
+
+    You can use a data-driven approach with a dictionary: 
+```python
+    actions = {
+        1: "Action A",
+        2: "Action B",
+        # ... 18 more entries
+    }
+    return actions.get(code, "Default action if not found")
+```
+> **When this refactoring is a good idea:**  
+This refactoring is highly effective when:
+
+> 1. Mapping inputs to static outputs: You are simply mapping a specific input value (like an error code or status identifier) to a corresponding output value (like a message or a function to run) [1].  
+> 2. The logic is simple and repetitive: The logic within each if block is similar, differing only in the specific data being used.
+> 3. Readability and Maintainability: The dictionary approach is more readable and easier to maintain, as adding a new case only requires adding a new key-value pair, rather than a new block of code.
+
