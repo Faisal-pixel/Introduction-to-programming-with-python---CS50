@@ -1,13 +1,26 @@
-def hello():
-    print("Hello")
+def main():
+    while True:
+        try:
+            x = int(input("What is x: "))
+        except ValueError:
+            print("x is not an integer")
+        else:
+            break
+    print(f"x is {x}")
 
-name = input("What's your name? ").strip().title();
-
-first, last = name.split(" ");
-
-print(f"Hello, {first} {last}!");
+if __name__ == "__main__":
+    main()
 
 
+# can write better like this:
+
+# def get_int():
+#     while True:
+#         try:
+#             return f"{int(input("What is x: "))}"
+#         except ValueError:
+#             print("x is not an integer")
+        
 
 ############### INTERESTING STUFF TO LOOK AT LATER ###############
 # 1. name.split(" ", 1) if " " in name else (name, "")
