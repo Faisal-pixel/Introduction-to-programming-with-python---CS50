@@ -145,3 +145,48 @@ This refactoring is highly effective when:
 > 2. The logic is simple and repetitive: The logic within each if block is similar, differing only in the specific data being used.
 > 3. Readability and Maintainability: The dictionary approach is more readable and easier to maintain, as adding a new case only requires adding a new key-value pair, rather than a new block of code.
 
+
+# 6. To create a virtual environment and install package in there:
+```bash
+    python -m venv .venv
+```
+This creates (hypothetical I am in the say folder):
+```code
+    say/
+    ├── .venv/
+    ├── your_file.py
+```
+
+Then you activate it:
+```bash
+    source .venv/bin/activate
+```
+I will see in the cmd next line:
+```text
+    (.venv) code_crushed@Faisals-MacBook-Pro
+```
+
+Then go ahead and install the package:
+```bash
+    python -m pip install cowsay
+```
+
+Then run your command.
+
+To exit the virtual environment, just run "deactivate".
+
+# 7. Understanding seeding in python's random module:
+    In simple terms, your system time acts as the initial "seed" when Python's built-in random module needs a starting number to generate a sequence of seemingly random numbers [1, 2]. 
+
+    Here is the "baby terms" breakdown:
+1. The Goal: You want a random number (like picking a number between 1 and 100).
+2. The Problem: Computers can't actually pick a number randomly; they need instructions. They use a formula (an algorithm) to produce a predictable sequence of numbers that looks random.
+3. The Seed (The Starting Point): The algorithm needs a "starting number" to begin its sequence. This starting number is called the seed.
+4. How the System Time Helps: If the seed were always the same (e.g., 5), you would get the same sequence of "random" numbers every time you ran your program. To make the sequence different each time, Python automatically uses a number that is always changing: your system's exact current time in tiny, tiny pieces (like milliseconds). 
+
+    So, your system time is just the unique starting number that tells Python's random formula where to begin, ensuring you get different "random" results almost every time you run your code.
+    You can explicitly see how this works by using the random.seed() function in your code to set the seed manually.
+
+Check here on chatgpt for more understanding: https://chatgpt.com/g/g-p-69283b7352048191bd487312008c1cca-cs50/c/6956aea4-7cdc-8325-b5e4-24b4778c2924
+
+# 8. 
