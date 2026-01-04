@@ -190,3 +190,10 @@ To exit the virtual environment, just run "deactivate".
 Check here on chatgpt for more understanding: https://chatgpt.com/g/g-p-69283b7352048191bd487312008c1cca-cs50/c/6956aea4-7cdc-8325-b5e4-24b4778c2924
 
 # 8. 
+
+
+# QUESTIONS
+
+# 1. What is with keyword in python:
+
+# 2. What is floating point precision
